@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>To do</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/Content/Style.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="~/Content/style.min.css">
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+
+    <div id="main-view" style="display:block">
+        <ul id="background" class="background"><li class="background-item fadein" style="background-image: url(&quot;https://images.unsplash.com/photo-1570300008796-bc36600cbd5d?ixlib=rb-1.2.1&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjcwOTV9&quot;);"></li></ul>
+        <div class="apps show-apps">
+            <div class="region bottom-right">
+                <div id="todo" class="app-container todo show show-fade-in" data-test="todo" style="display: none;">
+                    <div class="app-wrapper nipple-bottom-right">
+                        <div id="mainapp" class="app todo-app" style="height: auto; width: 350px;height:300px; overflow-y: scroll;">
+                            <header  class="header todo-header momentum-todo">
+                                <select class="SelectOption" id="SelectOption">
+                                    <option selected="selected">Today</option>
+                                    <option>Completed</option>
+                                </select>
+                                <div class="more" id="todo-top-menu">
+                                    <div class="icon-wrapper more-toggle" data-test="todo-item-dropdown-toggle">
+                                        <svg class="icon icon-ellipsis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path d="M8 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM52 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8zM30 22c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"></path></svg>
+                                    </div>
+                                    <div class="dropdown todo-actions-dropdown" style="opacity: 1;">
+                                        <ul id="dropdown-list" class="dropdown-list" style="display: none;">
+                                        <li data-itemid="c260" title="Mark all tasks as completed"><span class="dropdown-list-icon-wrapper"></span><span class="dropdown-list-label">Mark all tasks as completed</span></li>
+                                         <li data-itemid="c263" title="Delete ALL"><span class="dropdown-list-icon-wrapper"></span><span class="dropdown-list-label">Delete ALL</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="container">
+                                <div id="Todo" style="display:block;">
+                                    <p>
+                                        <label for="new-task">Add Item</label><input id="new-task" type="text"><button>Add</button>
+                                    </p>
+                                    <h3>Todo</h3>
+                                    <ul id="incomplete-tasks">
+                                       
+                                    </ul>
+                                </div>
+
+                                <div id="completed" style="display:none;">
+                                    <h3>Completed</h3>
+                                    <ul id="completed-tasks">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span id="ToDoButt" class="app-dash toggle Todo-toggle" data-test="todo-app-dash" style="color:white">Todo</span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/Scripts/app.js"></script>
+</body>
+</html>
